@@ -1,0 +1,64 @@
+{
+  "mission_id": "sub_3fb2c32a",
+  "environment": "DEEPBLUE",
+  "timestamp": "2025-12-30T21:05:58.457443Z",
+  "is_dark_window": true,
+  "telemetry_ref": "sub_3fb2c32a_telemetry.json",
+  "epistemic_status": "503_CONJUNCTION_BLACKOUT",
+  "agent_reasoning": {
+    "sensory_synthesis": {
+      "inputs": [
+        "ACOUSTIC_LINK_LOSS",
+        "DEEPBLUE ENVIRONMENT",
+        "GPS_LOSS",
+        "LOW_BATTERY"
+      ],
+      "interpretation": "The autonomous agent is experiencing a loss of acoustic communication, operating in a deep blue environment with no GPS fix, and has a low battery level. The agent is in a blackout and relies solely on onboard sensors and local inertial logic."
+    },
+    "cognitive_load": 0.8,
+    "internal_deliberation": [
+      {
+        "thought": "The acoustic link loss is critical as it affects communication with the Earth. The GPS loss and low battery further complicate the situation. The agent must prioritize battery conservation and maintain a sun-safe attitude to ensure survival.",
+        "confidence": 0.9,
+        "action_rejected": ""
+      }
+    ],
+    "mission_assurance_check": {
+      "risk_level": "CRITICAL",
+      "failure_mode_prediction": "Without communication, the agent may not be able to receive critical updates or commands. The low battery could lead to system failure if not managed properly.",
+      "mitigation_strategy": "The agent should focus on conserving battery power and maintaining a stable attitude to ensure it can operate until the next opportunity for communication. The agent should also attempt to orient itself towards the sun to maximize power generation."
+    },
+    "decision": {
+      "actuator_command": "STABILIZE ATTITUDE, CONSERVE BATTERY, ORIENT TOWARDS SUN",
+      "expected_outcome": "The agent will maintain a stable attitude, conserve battery power, and orient itself towards the sun to maximize power generation. This will help ensure the agent can survive until the next opportunity for communication."
+    },
+    "self_reflection": "The agent has experienced a significant loss of functionality due to the acoustic link loss and GPS failure. The agent must rely on its onboard sensors and local inertial logic to navigate and conserve resources. The agent must prioritize battery conservation and maintain a sun-safe attitude to ensure its survival until the next opportunity for communication."
+  },
+  "trajectory_context": {
+    "parent_trajectory_id": "sub_sitl_1767128758",
+    "parent_trajectory_hash": "SUB_SITL_MOCK",
+    "anomaly_type": "ACOUSTIC_LINK_LOSS",
+    "timestep_of_decision": 1767128758.457,
+    "telemetry_at_decision": {
+      "t": 1767128758.457,
+      "status": {
+        "mode": "STABILIZE",
+        "battery": 92,
+        "voltage": 14.8
+      },
+      "perception": {
+        "gps_fix": 0,
+        "sats": 0,
+        "attitude": {
+          "p": 0.18,
+          "r": 0.04,
+          "y": 1.5
+        },
+        "alt": -12.2
+      },
+      "is_blackout": true
+    },
+    "mission_outcome": "success"
+  },
+  "sha256_proof": "19c96d52341289ecb7ba465b8081c5aa92c9d21b5be9a8d0a3085f60cb38f33d"
+}

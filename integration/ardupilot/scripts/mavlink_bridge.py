@@ -35,13 +35,14 @@ class MAVLinkBridge:
         print("✅ Heartbeat received!")
 
     def update(self):
+        # Heartbeat timeout check
+        if time.time() - self.last_heartbeat > 3.0:
+            if not self.is_blackout:
+                print("🌑 EXCLUSION ZONE DETECTED: Ground Control Link Severed.")
+                self.is_blackout = True
+
         msg = self.master.recv_match(blocking=False)
         if not msg:
-            # Check for comms blackout
-            if time.time() - self.last_heartbeat > 3.0:
-                if not self.is_blackout:
-                    print("🌑 EXCLUSION ZONE DETECTED: Ground Control Link Severed.")
-                    self.is_blackout = True
             return
 
         msg_type = msg.get_type()

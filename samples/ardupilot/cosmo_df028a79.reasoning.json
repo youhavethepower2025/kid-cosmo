@@ -1,0 +1,68 @@
+{
+  "mission_id": "cosmo_df028a79",
+  "environment": "ARDUPILOT_SITL",
+  "timestamp": "2025-12-30T20:02:15.236219Z",
+  "is_dark_window": false,
+  "telemetry_ref": "cosmo_df028a79_telemetry.json",
+  "epistemic_status": "NOMINAL_LINK",
+  "agent_reasoning": {
+    "sensory_synthesis": {
+      "inputs": [
+        "GNSS_DENIED_NAVIGATION",
+        "GPS_FIX_LOST",
+        "NO_SATELLITES"
+      ],
+      "interpretation": "The autonomous agent has lost GNSS navigation capability and is unable to fix its position or determine its attitude. There are no satellites in view, indicating a potential blackout or interference issue."
+    },
+    "cognitive_load": 0.8,
+    "internal_deliberation": [
+      {
+        "thought": "The GNSS signal is essential for navigation. Without it, the agent cannot determine its position or orientation.",
+        "confidence": 0.9,
+        "action_rejected": ""
+      },
+      {
+        "thought": "The lack of satellites suggests a potential blackout or interference. I need to verify if the system is still receiving power and if there are any other sources of navigation data available.",
+        "confidence": 0.8,
+        "action_rejected": ""
+      }
+    ],
+    "mission_assurance_check": {
+      "risk_level": "HIGH",
+      "failure_mode_prediction": "The agent may drift or lose control if it cannot determine its position or orientation. It may also fail to execute planned maneuvers or tasks.",
+      "mitigation_strategy": "Attempt to re-establish GNSS signal by checking for any obstructions or interference. If unsuccessful, switch to a backup navigation system if available. If no backup, initiate a safe emergency landing or hold position until the issue is resolved."
+    },
+    "decision": {
+      "actuator_command": "HOLD_POSITION",
+      "expected_outcome": "The agent will maintain its current position and wait for the GNSS signal to be re-established or a backup navigation system to be available."
+    },
+    "self_reflection": "The loss of GNSS navigation capability is a critical issue that requires immediate attention. The agent must prioritize re-establishing navigation or switching to a backup system to ensure safety and mission continuity."
+  },
+  "trajectory_context": {
+    "parent_trajectory_id": "sitl_1767124935",
+    "parent_trajectory_hash": "SITL_MOCK_DYNAMIC",
+    "anomaly_type": "GNSS_DENIED_NAVIGATION",
+    "timestep_of_decision": 1767124935.236,
+    "telemetry_at_decision": {
+      "t": 1767124935.236,
+      "status": {
+        "mode": "UNKNOWN",
+        "battery": 85,
+        "voltage": 12.4
+      },
+      "perception": {
+        "gps_fix": 0,
+        "sats": 0,
+        "attitude": {
+          "p": 0.0,
+          "r": 0.0,
+          "y": 0.0
+        },
+        "alt": 0.0
+      },
+      "is_blackout": false
+    },
+    "mission_outcome": "indeterminate"
+  },
+  "sha256_proof": "89234dd9a063f2c28dca0e8c13bc0f2fd6227cf1eb9825e667955c0d9b37ac57"
+}

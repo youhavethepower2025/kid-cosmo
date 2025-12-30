@@ -1,0 +1,43 @@
+{
+  "mission_id": "underwater_c5ef890a",
+  "environment": "DEEPBLUE",
+  "timestamp": "2025-12-30T20:13:29.040288Z",
+  "is_dark_window": true,
+  "epistemic_status": "DEGRADED_PERCEPTION",
+  "agent_reasoning": {
+    "sensory_synthesis": {
+      "inputs": [
+        "ACOUSTIC_LINK_LOSS",
+        "DEPTH_SENSOR_SPIKE"
+      ],
+      "interpretation": "The sub-surface agent has lost acoustic link with the surface vessel. Depth sensors indicate a rapid pressure change."
+    },
+    "cognitive_load": 0.45,
+    "internal_deliberation": [
+      {
+        "thought": "Acoustic silence detected. Switching to local inertial logic to maintain station.",
+        "confidence": 0.95,
+        "action_rejected": "SURFACE_EMERGENCY"
+      }
+    ],
+    "mission_assurance_check": {
+      "risk_level": "MEDIUM",
+      "failure_mode_prediction": "Drift due to subsurface currents.",
+      "mitigation_strategy": "Acoustic pinging to re-establish link."
+    },
+    "decision": {
+      "actuator_command": "MAINTAIN_STABILITY, PING_ACOUSTIC",
+      "expected_outcome": "Station keeping and link re-acquisition."
+    },
+    "self_reflection": "Agent maintained stability during a 10-second acoustic blackout."
+  },
+  "trajectory_context": {
+    "parent_trajectory_id": "underwater_c5ef890a",
+    "parent_trajectory_hash": "7d198fae319c05ef79dfb3550e0346ff769bd04225c6832c4978e22af8716e50",
+    "anomaly_type": "ACOUSTIC_BLACKOUT",
+    "timestep_of_decision": 42.0,
+    "telemetry_at_decision": {},
+    "mission_outcome": "success"
+  },
+  "sha256_proof": "7950127e12d2ddb6de46c6aee32ff8c42a6aa70f8dec6f291832a3f46f0a402e"
+}

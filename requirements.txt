@@ -1,0 +1,4 @@
+pymavlink>=2.4.0
+mlx-lm>=0.0.6
+mcp>=0.1.0
+numpy>=1.24.0
